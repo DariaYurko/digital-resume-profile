@@ -1,11 +1,11 @@
 {
-  "name": "vanilla-app-template",
+  "name": "digital-resume-profile",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/vanilla-app-template/",
+    "build": "vite build --base=/digital-resume-profile/",
     "preview": "vite preview"
   },
   "devDependencies": {
