@@ -1,0 +1,42 @@
+:root {
+   --bg-body: #1c1d20;
+   --bg-accent: #ed3b44;
+   --bg-section-dark: #242527;
+   --bg-section-light: #fafafa;
+
+   --text-color-primary: #fafafa;
+   --text-color-secondary: color: rgba(250, 250, 250, 0.6);
+   --text-color-accent: #ed3b44;
+
+}
+
+body {
+   font-family: "Inter Tight", sans-serif;
+   font-weight: 500;
+   line-height: 1.5;
+   letter-spacing: -0.02em;
+   color: var(--text-color-primary);
+   background-color: var(--bg-body);
+
+}
+
+[class*="__container"] {
+   max-width: 1440px;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 32px;
+   padding-right: 32px;
+}
+
+.visually-hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+}
