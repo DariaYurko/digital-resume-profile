@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Inter+Tight:500,600');
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+
+@import './variables';
+@import './null.scss';
+@import './general.scss';
+@import './hero.scss';
+@import './covers.scss';
