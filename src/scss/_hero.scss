@@ -1,11 +1,10 @@
 .hero {
-  height: 100vh;
   background-image: url('../img/hero/bg-tablet.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
 
-  padding-top: 112px;
+  padding-top: 144px;
   padding-bottom: 32px;
 
   @media only screen and (min-resolution: 192dpi) {
@@ -15,25 +14,26 @@
   // .hero__container
 
   &__container {
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    row-gap: 43px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: flex-end;
+    // align-items: center;
+    // row-gap: 43px;
   }
 
   // .hero__title
-
   &__title {
-    display: flex;
-    align-items: center;
-
-    flex-grow: 1;
+    margin: 169px auto 212px auto;
 
     @media only screen and (min-width: 1440px) {
       max-width: 1085px;
+    }
+
+    @media only screen and (min-width: 768px) {
+      margin: 156px auto 187px auto;
+    }
+    @media only screen and (min-width: 1440px) {
+      margin-bottom: 243px;
     }
   }
 
@@ -41,11 +41,11 @@
 
   &__links {
     display: flex;
+    justify-content: flex-end;
     flex-wrap: wrap;
     gap: 4px;
 
     @media only screen and (min-width: 768px) {
-      align-self: flex-end;
     }
   }
 
@@ -75,7 +75,6 @@
   @media only screen and (min-width: 1440px) {
     font-size: 90px;
   }
-
 }
 
 .social {
