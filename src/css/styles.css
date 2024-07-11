@@ -316,11 +316,17 @@ body {
 }
 @media only screen and (min-width: 768px) {
   .hero__title {
-    font-size: 90px;
+    font-size: 60px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .hero__title {
+    font-size: 70px;
   }
 }
 @media only screen and (min-width: 1440px) {
   .hero__title {
+    font-size: 90px;
     max-width: 1085px;
   }
 }
