@@ -1,13 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Inter+Tight:500,600');
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
+/* --------- Сonnecting fonts --------- */
+@import url('https://fonts.googleapis.com/css?family=Inter+Tight:500,600&display=swap');
 
+// --------- Сonnecting variables --------------
 @import './variables';
+
+// --------- Сonnecting reset styles -----------
 @import './null.scss';
-@import './general.scss';
+
+// --------- Сonnecting common styles ---------
+@import './common.scss';
+
+// --------- Include css partials --------------
+@import './header.scss';
 @import './hero.scss';
 @import './covers.scss';

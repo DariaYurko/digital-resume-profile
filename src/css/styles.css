@@ -1,10 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Inter+Tight:500,600");
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
+@charset "UTF-8";
+/* --------- Сonnecting fonts --------- */
+@import url("https://fonts.googleapis.com/css?family=Inter+Tight:500,600&display=swap");
 /* -------- Reset styles ------- */
 *,
 *::before,
@@ -14,10 +10,6 @@
   border: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-*:focus {
-  outline: transparent;
 }
 
 h1,
@@ -82,6 +74,19 @@ body {
   background-color: #1c1d20;
 }
 
+.social__link,
+.mail-link {
+  -webkit-transition: border 250ms ease;
+  transition: border 250ms ease;
+}
+
+.social__link:hover,
+.social__link:focus,
+.mail-link:hover,
+.mail-link:focus {
+  border: 1px solid #fafafa;
+}
+
 /* Container ----------------------------- */
 [class*=__container] {
   max-width: 767px;
@@ -142,24 +147,24 @@ body {
 }
 
 /* ---------------- /Section-paddings */
-/* Button-accent-color ---------------*/
-.button-accent-color {
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 500;
+/* Accent-button ---------------*/
+.accent-button {
+  font-size: 14px;
   line-height: 1.5;
-  letter-spacing: -0.02em;
   color: #fafafa;
-  text-align: center;
-  display: inline-block;
   background-color: #ed3b44;
+  border: 1px solid transparent;
   border-radius: 60px;
-  padding: 13px 10px;
+  text-align: center;
+  padding: 13px 31px;
+  display: inline-block;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
 }
-.button-accent-color:hover,
-.button-accent-color:focus {
-  background-color: #e0373f;
+
+.accent-button:hover,
+.accent-button:focus {
+  background-color: rgba(224, 55, 64, 0.8823529412);
 }
 
 /* /Button-accent-color ---------------*/
@@ -177,14 +182,109 @@ body {
   overflow: hidden;
 }
 
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 32px 0;
+}
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
+}
+@media only screen and (max-width: 767.98px) {
+  .header__nav {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .header__button {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .header__burger-btn {
+    display: none;
+  }
+}
+
+.navigation {
+  text-align: center;
+}
+.navigation__title {
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  display: inline-block;
+  border-bottom: 1px solid #fafafa;
+  padding-bottom: 3px;
+}
+.navigation__list {
+  margin-top: 18px;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  visibility: hidden;
+  -webkit-transition: visibility 300ms ease, -webkit-transform 300ms ease;
+  transition: visibility 300ms ease, -webkit-transform 300ms ease;
+  transition: transform 300ms ease, visibility 300ms ease;
+  transition: transform 300ms ease, visibility 300ms ease, -webkit-transform 300ms ease;
+}
+
+.active {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  visibility: visible;
+}
+
+.menu__link {
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+.burger-btn__icon {
+  fill: none;
+  stroke: #fafafa;
+}
+.burger-btn__icon:hover {
+  stroke: blueviolet;
+}
+@media only screen and (min-width: 768px) {
+  .burger-btn {
+    display: none;
+  }
+}
+
 .hero {
   height: 100vh;
-  background-image: url("../img/hero/bg.png");
+  background-image: url("../img/hero/bg-tablet.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
-  padding-top: 114px;
+  padding-top: 112px;
   padding-bottom: 32px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  .hero {
+    background-image: url("../img/hero/bg-tablet@2x.webp");
+  }
 }
 .hero__container {
   height: 100%;
@@ -195,12 +295,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  row-gap: 43px;
 }
 .hero__title {
   display: -webkit-box;
@@ -212,6 +313,11 @@ body {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+@media only screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 90px;
+  }
 }
 @media only screen and (min-width: 1440px) {
   .hero__title {
@@ -236,7 +342,6 @@ body {
   font-size: 50px;
   letter-spacing: -0.03em;
   text-transform: uppercase;
-  margin-bottom: 212px;
 }
 @media only screen and (min-width: 768px) {
   .title {
@@ -252,11 +357,13 @@ body {
       flex-wrap: wrap;
   gap: 4px;
 }
-.social__item {
+.social__link {
+  font-size: 14px;
+  color: currentColor;
+  text-transform: uppercase;
   border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 60px;
-  width: 37px;
-  height: 37px;
+  border-radius: 50%;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -266,17 +373,17 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 37px;
+  height: 37px;
+}
+.social__link:hover {
+  border: 1px solid #fafafa;
 }
 @media only screen and (min-width: 768px) {
-  .social__item {
+  .social__link {
     width: 55px;
     height: 55px;
   }
-}
-.social__link {
-  font-size: 14px;
-  color: currentColor;
-  text-transform: uppercase;
 }
 
 .mail-link {
