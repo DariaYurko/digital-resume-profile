@@ -17,8 +17,6 @@
   // .header__logo
 
   &__logo {
-    display: flex;
-    column-gap: 8px;
   }
 
   // .header__nav
@@ -45,6 +43,9 @@
 }
 
 .logo {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 8px;
   // .logo__image
 
   &__image {
@@ -53,6 +54,7 @@
   // .logo__text
 
   &__text {
+    line-height: 1.2;
   }
 }
 
@@ -70,7 +72,7 @@
 
   // .navigation__list
   &__list {
-    margin-top: 18px;
+    margin-top: 20px;
 
     transform: scale(0);
     visibility: hidden;
